@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incredible Kolkata</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Incredible Kolkata</h1>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Welcome to the City of Joy</h2>
+        <p>Explore the charm of Howrah Bridge and savor the sweetness of Kolkata.</p>
+        <a href="#explore" class="cta-button">Explore Now</a>
+    </section>
+
+    <section id="highlights">
+        <div class="highlight" id="howrah-bridge">
+            <h2>Howrah Bridge</h2>
+            <img src="howrah-bridge.png" alt="Howrah Bridge">
+            <p>An iconic symbol of Kolkata, connecting the city with its rich history.</p>
+        </div>
+        <div class="highlight" id="sweets">
+            <h2>Famous Sweets</h2>
+            <img src="sweets.png" alt="Kolkata Sweets">
+            <p>Delight in the famous sweets of Kolkata, a city known for its culinary heritage.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Incredible Kolkata. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #e3e4e6;
+    color: #444;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+nav h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#hero {
+    background: linear-gradient(to right, #c2e9fb, #f4f9fd);
+    height: 80vh;
+    color: #444;
+    text-align: center;
+    padding-top: 150px;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ffafbd;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#highlights {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.highlight {
+    text-align: center;
+    width: 45%;
+}
+
+.highlight img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.highlight h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.highlight p {
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #e3e4e6;
+    color: #444;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #ccc;
+}
+// Smooth scroll to explore section
+document.querySelector('.cta-button').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector('#highlights').scrollIntoView({ behavior: 'smooth' });
+});
